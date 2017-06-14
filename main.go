@@ -80,7 +80,7 @@ func main() {
 		},
 
 		{
-			Name:    "usershow ",
+			Name:    "usershow",
 			Aliases: []string{"sh", "u"},
 			Usage:   "Show user's status or profile",
 			Action:  usershow,
