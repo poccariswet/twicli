@@ -101,6 +101,13 @@ func main() {
 			Usage:   "Save image of url like thi, $ twitter sa 'url' 'imageName' ",
 			Action:  saveimage,
 		},
+
+		{
+			Name: "deleteimage",
+			Aliases: []string{"delete", "d"},
+			Usage: "Delete in the HOME/.images image",
+			Action: deleteimage,
+		},
 	}
 
 	app.Run(os.Args)
