@@ -66,7 +66,7 @@ func pictweet(c *cli.Context) error {
 		}
 		return fmt.Errorf("cannot start fuzzy-search: %s", err)
 	}
-	fmt.Println(strings.TrimSpace(string(imagename)))
+	// fmt.Println(strings.TrimSpace(string(imagename)))
 	text := c.Args()[0]
 	pic := encode(strings.TrimSpace(string(imagename)))
 	media, _ := api.UploadMedia(pic)
