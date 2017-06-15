@@ -12,7 +12,6 @@ import (
 func saveimage(c *cli.Context) error {
 	if c.NArg() != 2 {
 		cli.ShowCommandHelp(c, "saveimage")
-		fmt.Printf("\ninvalid arguments\nYou should $ twicli save 'url' 'imagename' \n")
 		return fmt.Errorf("\ninvalid arguments\nYou should $ twicli save 'url' 'imagename' \n")
 	}
 
