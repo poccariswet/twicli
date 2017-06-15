@@ -9,7 +9,8 @@ import (
 func search(c *cli.Context) error {
 	if c.NArg() != 1 {
 		cli.ShowCommandHelp(c, "search")
-		return fmt.Errorf("\ninvalid arguments\nYou should $ twicli search 'sentence' \n")
+		fmt.Println("\nInvalid arguments\nYou should $ twicli search 'sentence' ")
+		return nil
 	}
 	text := c.Args()[0]
 	searchResult, _ := api.GetSearch(text, nil)

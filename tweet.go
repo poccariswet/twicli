@@ -9,7 +9,8 @@ import (
 func tweet(c *cli.Context) error {
 	if c.NArg() != 1 {
 		cli.ShowCommandHelp(c, "tweet")
-		return fmt.Errorf("\nTweet anything like this, $ twicli tweet 'sentence' \n")
+		fmt.Println("\nInvalid arguments\nYou should $ twicli tweet 'sentence' ")
+		return nil
 	}
 	text := c.Args()[0]
 	tweet, err := api.PostTweet(text, nil)

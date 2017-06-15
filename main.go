@@ -85,7 +85,7 @@ func main() {
 			Name:    "user",
 			Aliases: []string{"u"},
 			Usage:   "Show user's profile",
-			Action:  usershow,
+			Action:  user,
 		},
 
 		{
@@ -99,14 +99,14 @@ func main() {
 			Name:    "save",
 			Aliases: []string{"sa"},
 			Usage:   "Save image",
-			Action:  saveimage,
+			Action:  save,
 		},
 
 		{
 			Name: "delete",
 			Aliases: []string{"de", "d"},
 			Usage: "Delete in the HOME/.images image",
-			Action: deleteimage,
+			Action: delete,
 		},
 	}
 
