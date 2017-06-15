@@ -9,7 +9,7 @@ import (
 func tweet(c *cli.Context) error {
 	if c.NArg() != 1 {
 		cli.ShowCommandHelp(c, "tweet")
-		return fmt.Errorf("\ninvalid arguments words or you forgot ' '")
+		return fmt.Errorf("\nTweet anything like this, $ twitter tweet 'sentence' \n")
 	}
 	text := c.Args()[0]
 	tweet, err := api.PostTweet(text, nil)

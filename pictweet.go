@@ -47,7 +47,7 @@ func Dirplace(dir string) []string { //finding in the picture file
 func pictweet(c *cli.Context) error {
 	if c.NArg() != 1 {
 		cli.ShowCommandHelp(c, "pictweet")
-		return fmt.Errorf("\ninvalid arguments or multipl words")
+		return fmt.Errorf("\nTweet picture and sentence like this, $ twitter pic 'sentence' \n")
 	}
 
 	dirs := Dirplace(root)

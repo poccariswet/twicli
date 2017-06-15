@@ -12,7 +12,7 @@ import (
 func deleteimage(c *cli.Context) error {
 	if c.NArg() != 0 {
 		cli.ShowCommandHelp(c, "deleteimage")
-		return fmt.Errorf("\ninvalid arguments\nThere is too many words")
+		return fmt.Errorf("\ninvalid arguments\nThere is too many words\n")
 	}
 
 	dirs := Dirplace(root)

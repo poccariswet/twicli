@@ -63,13 +63,13 @@ func main() {
 		{
 			Name:    "tweet",
 			Aliases: []string{"tw", "t"},
-			Usage:   "Tweet anything like this, $ twitter tweet 'sentence' ",
+			Usage:   "Tweet sentence",
 			Action:  tweet,
 		},
 
 		{
 			Name:    "search",
-			Aliases: []string{"se", "s"},
+			Aliases: []string{"s"},
 			Usage:   "Search latest 15 tweets",
 			Action:  search,
 		},
@@ -77,34 +77,34 @@ func main() {
 		{
 			Name:    "timeline",
 			Aliases: []string{"ti", "time"},
-			Usage:   "You can see your twitter timelines of 15",
+			Usage:   "Show twitter timelines of 15",
 			Action:  timeline,
 		},
 
 		{
-			Name:    "usershow",
-			Aliases: []string{"sh", "u"},
-			Usage:   "Show user's status or profile",
+			Name:    "user",
+			Aliases: []string{"u"},
+			Usage:   "Show user's profile",
 			Action:  usershow,
 		},
 
 		{
 			Name:    "pictweet",
 			Aliases: []string{"pic", "p"},
-			Usage:   "Tweet picture and sentence like this, $ twitter pic 'sentence' ",
+			Usage:   "Tweet picture and sentence",
 			Action:  pictweet,
 		},
 
 		{
-			Name:    "saveimage",
-			Aliases: []string{"save", "sa"},
-			Usage:   "Save image of url like thi, $ twitter sa 'url' 'imageName' ",
+			Name:    "save",
+			Aliases: []string{"sa"},
+			Usage:   "Save image",
 			Action:  saveimage,
 		},
 
 		{
-			Name: "deleteimage",
-			Aliases: []string{"delete", "d"},
+			Name: "delete",
+			Aliases: []string{"de", "d"},
 			Usage: "Delete in the HOME/.images image",
 			Action: deleteimage,
 		},

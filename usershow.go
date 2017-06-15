@@ -9,7 +9,7 @@ import (
 func usershow(c *cli.Context) error {
 	if c.NArg() != 1 {
 		cli.ShowCommandHelp(c, "usershow")
-		return fmt.Errorf("\ninvalid arguments or multipl words")
+		return fmt.Errorf("\ninvalid arguments\nYou should $ user 'username(@***)' ")
 	}
 	text := c.Args()[0]
 	user, _ := api.GetUsersShow(text, nil)
