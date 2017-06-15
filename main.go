@@ -8,6 +8,8 @@ import (
 	"github.com/urfave/cli"
 )
 
+const fuzzy = "FZF"
+
 var (
 	ConKey    = os.Getenv("CON_KEY_TW")        //Twitter-Consumer-Key
 	ConSecKey = os.Getenv("CON_SECRET_KEY_TW") //Twitter-Consumer-Secret-Key
@@ -61,7 +63,7 @@ func main() {
 		{
 			Name:    "tweet",
 			Aliases: []string{"tw", "t"},
-			Usage:   "Tweet anything like this, $ twitter tweet '***' ",
+			Usage:   "Tweet anything like this, $ twitter tweet 'sentence' ",
 			Action:  tweet,
 		},
 
@@ -89,13 +91,13 @@ func main() {
 		{
 			Name:    "pictweet",
 			Aliases: []string{"pic", "p"},
-			Usage:   "Tweet picture and sentence like this, $ twitter pic 'imagename' 'sentence' ",
+			Usage:   "Tweet picture and sentence like this, $ twitter pic 'sentence' ",
 			Action:  pictweet,
 		},
 
 		{
 			Name:    "saveimage",
-			Aliases: []string{"sa"},
+			Aliases: []string{"save", "sa"},
 			Usage:   "Save image of url like thi, $ twitter sa 'url' 'imageName' ",
 			Action:  saveimage,
 		},
