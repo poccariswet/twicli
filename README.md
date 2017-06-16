@@ -13,16 +13,16 @@ $ go get github.com/soeyusuke/twicli
 
 And you need to set some environment variables
 ``` sh
-$ export CON_KEY_TW="Your Twitter-Consumer-Key"
+$ export CON_KEY_TW="Your-Twitter-Consumer-Key"
 ```
 ``` sh
-$ export CON_SECRET_KEY_TW="Your Twitter-Consumer-Secret-Key"
+$ export CON_SECRET_KEY_TW="Your-Twitter-Consumer-Secret-Key"
 ```
 ``` sh
-$ export ACC_KEY_TW="Your Twitter-Access-Token"
+$ export ACC_KEY_TW="Your-Twitter-Access-Token"
 ```
 ``` sh
-$ export ACC_SECRET_KEY_TW="Your Twitter-Access-Token-Secret"
+$ export ACC_SECRET_KEY_TW="Your-Twitter-Access-Token-Secret"
 ```
 
 ## Usage
