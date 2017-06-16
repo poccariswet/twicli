@@ -31,19 +31,19 @@ func Set() {
 func init() {
 	Set() //keyの設定
 	if ConKey == "" {
-		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"CON_KEY_TW")
+		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"Twitter consmer key")
 		os.Exit(1)
 	}
 	if ConSecKey == "" {
-		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"CON_SECRET_KEY_TW")
+		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"Twitter secret consumer key")
 		os.Exit(1)
 	}
 	if AccKey == "" {
-		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"ACC_KEY_TW")
+		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"Twitter access token")
 		os.Exit(1)
 	}
 	if AccSecKey == "" {
-		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"ACC_SECRET_KEY_TW")
+		fmt.Fprintln(os.Stderr, "please set environment variable: $"+"Twitter access secret key")
 		os.Exit(1)
 	}
 
