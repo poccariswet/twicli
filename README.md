@@ -53,7 +53,8 @@ See the user information
 $ twicli user @***
 ```
 
-for example `$ twicli user TigersDreamlink`
+#### for example `$ twicli user TigersDreamlink`
+
 ![user](./user.png)
 
 ### Pictweet
