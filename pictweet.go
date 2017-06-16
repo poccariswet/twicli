@@ -65,7 +65,8 @@ func pictweet(c *cli.Context) error {
 		if strings.Contains("exit status 130", err.Error()) {
 			return nil
 		}
-		return fmt.Errorf("cannot start fuzzy-search: %s", err)
+		fmt.Println("cannot start fuzzy-search: %s", err)
+		return nil
 	}
 	// fmt.Println(strings.TrimSpace(string(imagename)))
 	text := c.Args()[0]
