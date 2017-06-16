@@ -33,6 +33,11 @@ func delete(c *cli.Context) error {
 		return fmt.Errorf("cannot start fuzzy-search: %s", err)
 	}
 
+	if strings.TrimSpace(string(imagename)) == "" {
+		fmt.Println("cannnot select empty string\n")
+		return fmt.Errorf("Please select image")
+	}
+
 	if err := os.Remove(strings.TrimSpace(string(imagename))); err != nil { //delete file
 		return fmt.Errorf("\ncannot delete image")
 	}

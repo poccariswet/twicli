@@ -68,6 +68,11 @@ func pictweet(c *cli.Context) error {
 		fmt.Println("cannot start fuzzy-search: %s", err)
 		return nil
 	}
+
+	if strings.TrimSpace(string(imagename)) == "" {
+		fmt.Println("cannnot select empty string\n")
+		return fmt.Errorf("Please select image")
+	}
 	// fmt.Println(strings.TrimSpace(string(imagename)))
 	text := c.Args()[0]
 	pic := encode(strings.TrimSpace(string(imagename)))
