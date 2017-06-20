@@ -22,24 +22,6 @@ func encode(image string) string {
 	return base64.StdEncoding.EncodeToString(data)
 }
 
-// func Dirplace(dir string) []string { //finding in the picture file
-// 	files, err := ioutil.ReadDir(dir)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-//
-// 	var paths []string
-// 	for _, file := range files {
-// 		if file.IsDir() {
-// 			paths = append(paths, Dirplace(filepath.Join(dir, file.Name()))...)
-// 			continue
-// 		}
-// 		paths = append(paths, filepath.Join(dir, file.Name()))
-// 	}
-//
-// 	return paths
-// }
-
 func pictweet(c *cli.Context) error {
 	if c.NArg() != 1 {
 		cli.ShowCommandHelp(c, "pictweet")
@@ -53,27 +35,10 @@ func pictweet(c *cli.Context) error {
 		files += fmt.Sprintf("%s\n", dir)
 	}
 
-	// imagename, err := pipeline.Output(
-	// 	[]string{"echo", files},    // pictures in the directory.
-	// 	[]string{os.Getenv(fuzzy)}, // fuzzy search
-	// )
-	// if err != nil {
-	// 	if strings.Contains("exit status 130", err.Error()) {
-	// 		return nil
-	// 	}
-	// 	fmt.Println("cannot start fuzzy-search: %s", err)
-	// 	return nil
-	// }
-	//
-	// if strings.TrimSpace(string(imagename)) == "" {
-	// 	fmt.Println("cannnot select empty string\n")
-	// 	return fmt.Errorf("Please select image")
-	// }
 	imagename, err := getimage()
 	if err != nil {
 		return err
 	}
-	// fmt.Println(strings.TrimSpace(string(imagename)))
 	text := c.Args()[0]
 	pic := encode(imagename)
 	media, _ := api.UploadMedia(pic)

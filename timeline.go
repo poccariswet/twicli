@@ -13,7 +13,6 @@ func timeline(c *cli.Context) error {
 		return nil
 	}
 
-	// v := url.Values{}
 	timelines, _ := api.GetHomeTimeline(nil) //default's numbers of timeline are 15
 	for _, timeline := range timelines {
 		fmt.Println("[" + timeline.User.Name + "]" + " " + timeline.Text)
